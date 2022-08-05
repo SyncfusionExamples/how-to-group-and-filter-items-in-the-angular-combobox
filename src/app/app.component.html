@@ -1,0 +1,15 @@
+<div class="container">
+  <ejs-combobox #sample placeholder="Select employee"
+    [dataSource]="employeeData"
+    [fields]="fieldSettings"
+    [allowFiltering]="true"
+    (filtering)="onFiltering($event)"
+    >
+    <!-- [ignoreAccent]="true" -->
+    <ng-template #groupTemplate let-data>
+      <div style="font-style: italic;color: blue;">
+        {{data.Designation}}
+      </div>
+    </ng-template>
+  </ejs-combobox>
+</div>
